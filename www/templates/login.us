@@ -1,0 +1,7 @@
+<h1>Login</h1>
+
+<form id="login">
+    <input name="email" class="full-form" type="email" placeholder="email..."><br/>
+    <input name="password" class="full-form" type="password" placeholder="password..."><br/>
+    <button type="submit" class="btn btn-primary btn-block">Login</button>
+</form>

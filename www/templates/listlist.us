@@ -1,0 +1,8 @@
+<% if (lists.length === 0) { %>
+  <div class="alert alert-block alert-info">
+    No lists available
+  </div>
+<% } %>
+<% _.each(lists, function(list) {  %> 
+  <button class="btn btn-large btn-block listlistitem" type="button" data-id="<%= list.id.toString() %>"><%= list.title %></button>
+<% }); %>

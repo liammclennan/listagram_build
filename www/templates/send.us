@@ -1,0 +1,6 @@
+<form>
+    <input name="receiver" class="full-form" type="email" placeholder="receiver..."><br/>
+    <input name="title" class="full-form" type="text" placeholder="title..."><br/>
+    <textarea name="items" class="full-form" rows="6" placeholder="enter one item per line..."></textarea><br/>
+    <button type="submit" class="btn btn-primary btn-block">Send</button>
+</form>

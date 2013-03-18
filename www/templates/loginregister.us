@@ -1,0 +1,12 @@
+<div class="row-fluid">
+  <div class="span6"><button class="btn btn-large btn-block loginregisteritem" type="button" data-state="login">Login</button></div>
+  <div class="span6"><button class="btn btn-large btn-block loginregisteritem" type="button" data-state="register">Register</button></div>
+</div>
+
+<br/>
+<div class="well">
+  <h1>Welcome to listagram</h1>
+  <p>Use listagram to send lists to your friends.</p>
+  <p>Great for shopping lists, task lists and other short lists.</p>
+</div>
+

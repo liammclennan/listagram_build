@@ -1,0 +1,7 @@
+<div class="validation_errors_container alert alert-block alert-error">
+  <ul>
+    <% _.each(errors, function (error) { %>
+      <li><%= error.property %> <%= error.message %></li>
+    <% }) %>
+  </ul> 
+</div>

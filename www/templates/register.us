@@ -1,0 +1,7 @@
+<h1>Register</h1>
+
+<form id="register">
+    <input name="email" class="full-form" type="email" placeholder="email..."><br/>
+    <input name="password" class="full-form" type="password" placeholder="password (optional)..."><br/>
+    <button type="submit" class="btn btn-primary btn-block register-submit">Register</button>
+</form>
