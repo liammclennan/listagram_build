@@ -1,8 +1,11 @@
-<widget id="net.onashirt.listagram" version="0.0.2">
+<widget id="net.onashirt.listagram" version="0.0.3">
 
   <name>Listagram</name>
   <description>Send and receive lists</description>
   <author href="http://eclipsewebsolutions.com.au" email="info@eclipsewebsolutions.com.au">Liam McLennan</author>
   <feature name="http://api.phonegap.com/1.0/device" />
+  <feature name="http://api.phonegap.com/1.0/network" />
   <access origin="http://listagram.onashirt.net:3999"/>
+  <access origin="http://onashirt.net" subdomains="true" />
+  <access origin="http://onashirt.net:3999" subdomains="true" />
 </widget>
