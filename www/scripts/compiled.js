@@ -2823,7 +2823,6 @@ require.define("/www/scripts/states/state_loginregister.coffee",function(require
     parentState: 'running',
     enterState: function() {
       $('#body-container').html(templates.login());
-      $('form:not(.filter) :input:visible:first').focus();
       return $('form#login > button').click(function() {
         var auth_promise, form_data;
         form_data = validation.read_form($('form#login'));
@@ -2851,7 +2850,6 @@ require.define("/www/scripts/states/state_loginregister.coffee",function(require
     parentState: 'running',
     enterState: function() {
       $('#body-container').html(templates.register());
-      $('form:not(.filter) :input:visible:first').focus();
       return validation.validate_form($('#body-container'), validation.validate_register_form, function(err, form_data) {
         var register_promise;
         if (err != null) {

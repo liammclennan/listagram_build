@@ -15,7 +15,6 @@ statechart.addState 'login',
   parentState: 'running',
   enterState: ->
     $('#body-container').html(templates.login())
-    $('form:not(.filter) :input:visible:first').focus()
     $('form#login > button').click ->
       form_data = validation.read_form $('form#login')
       auth_promise = server.authenticate(form_data.email.toLowerCase(), form_data.password)
@@ -34,7 +33,6 @@ statechart.addState 'register',
   parentState: 'running',
   enterState: ->
     $('#body-container').html(templates.register())
-    $('form:not(.filter) :input:visible:first').focus()
     validation.validate_form $('#body-container'), validation.validate_register_form, (err, form_data) ->
       if err? 
         console.dir err
