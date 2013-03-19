@@ -3605,7 +3605,6 @@ require.define("/www/scripts/states/state_send.coffee",function(require,module,e
     enterState: function() {
       $('#body-container').html(templates.send());
       $('.back-button').addClass('foundicon-left-arrow');
-      $('form:not(.filter) :input:visible:first').focus();
       return validation.validate_form($('#body-container'), validation.validate_send_form, function(err, form_data) {
         var list, send_promise;
         if (err != null) {

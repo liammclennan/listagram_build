@@ -5,7 +5,6 @@ statechart.addState 'send',
   enterState: ->
     $('#body-container').html(templates.send())
     $('.back-button').addClass('foundicon-left-arrow')
-    $('form:not(.filter) :input:visible:first').focus()
     validation.validate_form $('#body-container'), validation.validate_send_form, (err, form_data) ->
       if err?
         console.dir err
