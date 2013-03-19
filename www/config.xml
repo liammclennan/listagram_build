@@ -1,4 +1,4 @@
-<widget id="net.onashirt.listagram" version="0.0.4">
+<widget id="net.onashirt.listagram" version="0.0.5" xmlns = "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0">
 
   <name>Listagram</name>
   <description>Send and receive lists</description>
@@ -18,4 +18,5 @@
   <icon src="images/icons/icon48.png" gap:platform="android" gap:density="mdpi" />
   <icon src="images/icons/icon72.png" gap:platform="android" gap:density="hdpi" />
   <icon src="images/icons/icon96.png" gap:platform="android" gap:density="xhdpi" />
+
 </widget>
