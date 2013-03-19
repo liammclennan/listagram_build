@@ -6086,6 +6086,7 @@ body {
   position: relative;
   left: -4%;
   display: block;
+  display: none;
   width: 100px;
   margin: auto;
 }
