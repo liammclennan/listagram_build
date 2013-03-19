@@ -3037,7 +3037,7 @@ require.define("/server/config.coffee",function(require,module,exports,__dirname
   };
 
   base = {
-    server_url: 'http://listagram.onashirt.net:3999/'
+    server_url: 'http://localhost:3999/'
   };
 
   module.exports = _.extend(base, environments[env] || {});
@@ -3048,7 +3048,7 @@ require.define("/server/config.coffee",function(require,module,exports,__dirname
 
 require.define("/server/environment.coffee",function(require,module,exports,__dirname,__filename,process,global){(function() {
 
-  module.exports = "ubuntupad";
+  module.exports = "linuntu";
 
 }).call(this);
 

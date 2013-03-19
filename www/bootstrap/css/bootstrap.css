@@ -6075,3 +6075,9 @@ body {
   margin: 20px 5px 0 5px;
   font-size: 3em;
 }
+
+.spinner {
+  width: 100px;
+  margin: auto;
+  margin-top: 60px;
+}
