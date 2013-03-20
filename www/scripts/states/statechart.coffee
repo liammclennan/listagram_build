@@ -11,7 +11,9 @@ activate_menu = ->
       statechart.sendEvent 'navigate', target_state
 
 device_ready = ->
+  alert 'device ready'
   back_event = ->
+    alert 'back event'
     statechart.sendEvent 'backbutton'
   document.addEventListener("backbutton", back_event, true)
 
