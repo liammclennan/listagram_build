@@ -2,6 +2,11 @@
   <div class="alert alert-block alert-info">
     No lists available
   </div>
+  <div class="well">
+    <h1>Don't have any lists?</h1>
+    <p>Have a friend use listagram to send you a list (using the email address you registered with) or send yourself a list.</p>
+    <p>To send a list, select the 'Send' option from the menu above.</p>
+  </div>
 <% } %>
 <% _.each(lists, function(list) {  %> 
   <button class="btn btn-large btn-block listlistitem" type="button" data-id="<%= list.id.toString() %>"><%= list.title %></button>

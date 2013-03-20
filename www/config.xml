@@ -1,4 +1,4 @@
-<widget id="net.onashirt.listagram" version="0.0.6" xmlns = "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0">
+<widget id="net.onashirt.listagram" version="0.0.7" xmlns = "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0">
 
   <name>Listagram</name>
   <description>Send and receive lists</description>

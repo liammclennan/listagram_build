@@ -30,7 +30,7 @@ return __p;
 templates["send"] = function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 with(obj||{}){
-__p+='<form>\n    <input name="receiver" class="full-form" type="email" placeholder="receiver..."><br/>\n    <input name="title" class="full-form" type="text" placeholder="title..."><br/>\n    <textarea name="items" class="full-form" rows="6" placeholder="enter one item per line..."></textarea><br/>\n    <button type="submit" class="btn btn-primary btn-block">Send</button>\n</form>';
+__p+='<h1>Send</h1>\n\n<form>\n    <input name="receiver" class="full-form" type="email" placeholder="receiver..."><br/>\n    <input name="title" class="full-form" type="text" placeholder="title..."><br/>\n    <textarea name="items" class="full-form" rows="6" placeholder="enter one item per line..."></textarea><br/>\n    <button type="submit" class="btn btn-primary btn-block">Send</button>\n</form>\n\n<div class="well">\n  <h1>Sending a list</h1>\n  <p>Use this form to send a list.</p>\n  <p>Enter an email address in first field (receiver...). This can be any valid email address including your own.</p>\n  <p>Give your list a title in the second field.</p>\n  <p>Enter your list in the large field. Put each new list item on its own line.</p>\n  <p>Touch the \'Send\' button to send your list.</p>\n</div>';
 }
 return __p;
 }
@@ -68,7 +68,7 @@ var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments
 with(obj||{}){
 __p+='';
  if (lists.length === 0) { 
-__p+='\n  <div class="alert alert-block alert-info">\n    No lists available\n  </div>\n';
+__p+='\n  <div class="alert alert-block alert-info">\n    No lists available\n  </div>\n  <div class="well">\n    <h1>Don\'t have any lists?</h1>\n    <p>Have a friend use listagram to send you a list (using the email address you registered with) or send yourself a list.</p>\n    <p>To send a list, select the \'Send\' option from the menu above.</p>\n  </div>\n';
  } 
 __p+='\n';
  _.each(lists, function(list) {  

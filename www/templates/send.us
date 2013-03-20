@@ -1,6 +1,17 @@
+<h1>Send</h1>
+
 <form>
     <input name="receiver" class="full-form" type="email" placeholder="receiver..."><br/>
     <input name="title" class="full-form" type="text" placeholder="title..."><br/>
     <textarea name="items" class="full-form" rows="6" placeholder="enter one item per line..."></textarea><br/>
     <button type="submit" class="btn btn-primary btn-block">Send</button>
 </form>
+
+<div class="well">
+  <h1>Sending a list</h1>
+  <p>Use this form to send a list.</p>
+  <p>Enter an email address in first field (receiver...). This can be any valid email address including your own.</p>
+  <p>Give your list a title in the second field.</p>
+  <p>Enter your list in the large field. Put each new list item on its own line.</p>
+  <p>Touch the 'Send' button to send your list.</p>
+</div>
