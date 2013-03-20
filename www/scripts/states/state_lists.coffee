@@ -44,6 +44,10 @@ statechart.addState 'list',
     list_deferred.fail (err) ->
       console.dir err
       alert JSON.stringify err  
+
+  backbutton: ->
+    statechart.sendEvent 'navigate', 'listlist'
+
   exitState: ->
     $('#body-container').empty()
     $('.back-button').removeClass('foundicon-left-arrow')

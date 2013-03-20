@@ -10,12 +10,15 @@ activate_menu = ->
       target_state = $(this).attr('id').split('-')[1]
       statechart.sendEvent 'navigate', target_state
 
+device_ready = ->
+  back_event = ->
+    statechart.sendEvent 'backbutton'
+  document.addEventListener("backbutton", back_event, true)
+
 statechart.addState "running", 
   enterState: ->
-    activate_menu()      
-    $('.back-button').click ->
-      statechart.sendEvent 'navigate', 'listlist'
-      
+    activate_menu()
+    document.addEventListener("deviceready", device_ready, false);      
     unless identity.is_authenticated()
       statechart.sendEvent 'navigate', 'loginregister'
     else 

@@ -3699,6 +3699,9 @@ require.define("/www/scripts/states/state_lists.coffee",function(require,module,
         return alert(JSON.stringify(err));
       });
     },
+    backbutton: function() {
+      return statechart.sendEvent('navigate', 'listlist');
+    },
     exitState: function() {
       $('#body-container').empty();
       return $('.back-button').removeClass('foundicon-left-arrow');
@@ -3733,7 +3736,7 @@ require.define("/www/scripts/services/menu.coffee",function(require,module,expor
 });
 
 require.define("/www/scripts/states/statechart.coffee",function(require,module,exports,__dirname,__filename,process,global){(function() {
-  var activate_menu, identity, menu, state_lists, state_loginregister, state_send, _ref;
+  var activate_menu, device_ready, identity, menu, state_lists, state_loginregister, state_send, _ref;
 
   _ref = [require('../services/identity'), require('./state_loginregister'), require('./state_send'), require('./state_lists'), require('../services/menu')], identity = _ref[0], state_loginregister = _ref[1], state_send = _ref[2], state_lists = _ref[3], menu = _ref[4];
 
@@ -3751,12 +3754,18 @@ require.define("/www/scripts/states/statechart.coffee",function(require,module,e
     });
   };
 
+  device_ready = function() {
+    var back_event;
+    back_event = function() {
+      return statechart.sendEvent('backbutton');
+    };
+    return document.addEventListener("backbutton", back_event, true);
+  };
+
   statechart.addState("running", {
     enterState: function() {
       activate_menu();
-      $('.back-button').click(function() {
-        return statechart.sendEvent('navigate', 'listlist');
-      });
+      document.addEventListener("deviceready", device_ready, false);
       if (!identity.is_authenticated()) {
         return statechart.sendEvent('navigate', 'loginregister');
       } else {
