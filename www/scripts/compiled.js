@@ -3679,9 +3679,7 @@ require.define("/www/scripts/states/state_lists.coffee",function(require,module,
       list_deferred = features.list(id);
       render_bind = function(list) {
         $('#body-container').empty();
-        $('#body-container').html(templates.list({
-          items: list.items
-        }));
+        $('#body-container').html(templates.list(list));
         return $('.listitem').click(function() {
           var $button, $checkbox, clicked_item, update_item_d;
           $button = $(this);

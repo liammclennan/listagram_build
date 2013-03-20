@@ -1,3 +1,4 @@
+<h2><%= title %></h2>
 <% _.each(items, function(item) {  %> 
   <button class="btn btn-large btn-block listitem <%= (item.completed) ? 'disabled' : ''  %>" type="button"><input type="checkbox" <%= (item.completed) ? 'checked="checked"' : ''  %>  class="pull-left button-checkbox"> <%= item.description %></button>
 <% }); %>

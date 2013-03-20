@@ -13,7 +13,9 @@ return __p;
 templates["list"] = function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 with(obj||{}){
-__p+='';
+__p+='<h2>'+
+((__t=( title ))==null?'':__t)+
+'</h2>\n';
  _.each(items, function(item) {  
 __p+=' \n  <button class="btn btn-large btn-block listitem '+
 ((__t=( (item.completed) ? 'disabled' : ''  ))==null?'':__t)+
