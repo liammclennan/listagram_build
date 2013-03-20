@@ -2841,6 +2841,9 @@ require.define("/www/scripts/states/state_loginregister.coffee",function(require
         return false;
       });
     },
+    backbutton: function() {
+      return statechart.sendEvent('navigate', 'loginregister');
+    },
     exitState: function() {
       return $('#body-container').empty();
     }
@@ -2864,6 +2867,9 @@ require.define("/www/scripts/states/state_loginregister.coffee",function(require
           return alert(JSON.stringify(err));
         });
       });
+    },
+    backbutton: function() {
+      return statechart.sendEvent('navigate', 'loginregister');
     },
     exitState: function() {
       return $('#body-container').empty();
@@ -3620,6 +3626,9 @@ require.define("/www/scripts/states/state_send.coffee",function(require,module,e
         });
       });
     },
+    backbutton: function() {
+      return statechart.sendEvent('navigate', 'listlist');
+    },
     exitState: function() {
       $('#body-container').empty();
       return $('.back-button').removeClass('foundicon-left-arrow');
@@ -3756,9 +3765,7 @@ require.define("/www/scripts/states/statechart.coffee",function(require,module,e
 
   device_ready = function() {
     var back_event;
-    alert('device ready');
     back_event = function() {
-      alert('back event');
       return statechart.sendEvent('backbutton');
     };
     return document.addEventListener("backbutton", back_event, true);
